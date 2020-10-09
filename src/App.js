@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import { CardList } from "./components/card-list/card-list.component";
 import { SearchBox } from "./components/serachbox/searchbox.component";
+import { Footer } from "./components/footer/footer.component";
 import "./App.css";
 
 class App extends Component {
@@ -26,12 +27,15 @@ class App extends Component {
 
     return (
       <div className="container">
-        <h1 className="page__title">React Flakes</h1>
-        <SearchBox
-          placeholder="Serach "
-          handleChange={(e) => this.setState({ searchKey: e.target.value })}
-        ></SearchBox>
-        <CardList monsters={filterMonsters}></CardList>
+        <div className="page-container">
+          <h1 className="page__title">React Flakes</h1>
+          <SearchBox
+            placeholder="Serach "
+            handleChange={(e) => this.setState({ searchKey: e.target.value })}
+          ></SearchBox>
+          <CardList monsters={filterMonsters}></CardList>
+        </div>
+        <Footer></Footer>
       </div>
     );
   }

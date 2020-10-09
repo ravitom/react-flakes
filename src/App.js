@@ -13,7 +13,7 @@ class App extends Component {
     };
   }
   componentDidMount() {
-    const url = "https://reqres.in/api/users?page=2";
+    const url = "https://reqres.in/api/users?page=1";
     fetch(url)
       .then((response) => response.json())
       .then((users) => this.setState({ monsters: users.data }));
@@ -26,8 +26,9 @@ class App extends Component {
 
     return (
       <div className="container">
+        <h1 className="page__title">React Flakes</h1>
         <SearchBox
-          placeholder="serach Monster"
+          placeholder="Serach "
           handleChange={(e) => this.setState({ searchKey: e.target.value })}
         ></SearchBox>
         <CardList monsters={filterMonsters}></CardList>

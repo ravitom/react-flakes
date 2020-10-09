@@ -1,0 +1,24 @@
+.card-container {
+  border-radius: 5px;
+  display: flex;
+  margin: 10px;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  padding: 20px;
+  backface-visibility: hidden;
+
+  background-color: #95dada;
+}
+
+img {
+  border-radius: 50%;
+  transform: translateZ(0);
+  transition: transform 0.25s ease-in-out;
+}
+img:hover {
+  transform: scale(1.05);
+  filter: sepia(100%);
+  opacity: 0.8;
+}
